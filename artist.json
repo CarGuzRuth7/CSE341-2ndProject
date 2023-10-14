@@ -1,0 +1,100 @@
+[{
+    "name": "Adele Adkins",
+    "age": 35,
+    "typeOfVoice": "mezzosoprano",
+    "band": "Adele",
+    "genre": "Blue-eyed soul",
+    "death": null
+
+},
+{
+    "name": "Michael Jackson",
+    "age": 50,
+    "typeOfVoice": "contratenor",
+    "band": "Michael Jackson",
+    "genre": "Pop",
+    "death": "25 June 2009"
+
+},
+{
+    "name": "Abel Pintos",
+    "age": 39,
+    "typeOfVoice": "tenor",
+    "band": "Albel Pintos",
+    "genre": "Latinamerican Pop",
+    "death": null
+
+},
+{
+    "name": "Freddy Mercury",
+    "age": 45,
+    "typeOfVoice": "baritone-tenor",
+    "band": "Queen",
+    "genre": "Rock",
+    "death": "24 November 1991"
+
+},
+{
+    "name": "Demon Albarn",
+    "age": 55,
+    "typeOfVoice": "baritone",
+    "band": "Gorillaz",
+    "genre": "Alternative Rock",
+    "death": null
+
+},
+{
+    "name": "Paul McCartney",
+    "age": 81,
+    "typeOfVoice": "tenor",
+    "band": "The Beatles",
+    "genre": "Rock",
+    "death": null
+
+},
+{
+    "name": "Serj Tankian",
+    "age": 56,
+    "typeOfVoice": "baritone",
+    "band": "System of a Down",
+    "genre": "Alternative Rock",
+    "death": null
+
+},
+{
+    "name": "George Michael",
+    "age": 53,
+    "typeOfVoice": "baritone",
+    "band": "Wham!",
+    "genre": "Pop",
+    "death": "25 September 2016"
+
+},
+{
+    "name": "Amy Lee",
+    "age": 41,
+    "typeOfVoice": "mezzosoprano",
+    "band": "Evanescence",
+    "genre": "Alternative Rock",
+    "death": null
+
+},
+{
+    "name": "Rick Astley",
+    "age": 57,
+    "typeOfVoice": "baritone",
+    "band": "Rick Astley",
+    "genre": "Pop",
+    "death": null
+
+},
+{
+    "name": "Victor García",
+    "age": 53,
+    "typeOfVoice": "tenor",
+    "band": "War Cry",
+    "genre": "Power Metal",
+    "death": null
+
+}
+]

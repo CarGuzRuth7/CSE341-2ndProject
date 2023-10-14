@@ -1,0 +1,18 @@
+[
+    {
+    "firstName": "Admin",
+    "lastName": "User",
+    "email": "adminuser@cse341.com",
+    "favAlbum": "none",
+    "favArtist": "none"
+
+},
+    {
+    "firstName": "Ruth",
+    "lastName": "Cardona",
+    "email": "cardonaguzmanruth97@gmail.com",
+    "favAlbum": "Absolution, Muse",
+    "favArtist": "Matt Bellamy"
+
+}
+]

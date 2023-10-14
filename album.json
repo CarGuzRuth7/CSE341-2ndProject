@@ -1,0 +1,100 @@
+[{
+    "title": "Dire Straits",
+    "year": 1978,
+    "genre": "Rock",
+    "artist": "Dire Straits",
+    "totalSongs": 9,
+    "duration": "41:34"
+
+},
+{
+    "title": "Help!",
+    "year": 1965,
+    "genre": "Pop rock",
+    "artist": "The Beatles",
+    "totalSongs": 14,
+    "duration": "34:16"
+
+},
+{
+    "title": "Thriller",
+    "year": 1982,
+    "genre": "Pop",
+    "artist": "Michael Jackson",
+    "totalSongs": 9,
+    "duration": "42:16"
+
+},
+{
+    "title": "Wicked game",
+    "year": 2011,
+    "genre": "Romantic Liric, Crossover",
+    "artist": "Il Divo",
+    "totalSongs": 10,
+    "duration": "41:04"
+
+},
+{
+    "title": "Impera",
+    "year": 2022,
+    "genre": "Heavy Metal",
+    "artist": "Ghost",
+    "totalSongs": 13,
+    "duration": "46:21"
+
+},
+{
+    "title": "Lamina Once",
+    "year": 2022,
+    "genre": "Punk Rock",
+    "artist": "El Cuarteto de Nos",
+    "totalSongs": 8,
+    "duration": "32:56"
+
+},
+{
+    "title": "Simulation Theory",
+    "year": 2018,
+    "genre": "Electronic Rock",
+    "artist": "Muse",
+    "totalSongs": 11,
+    "duration": "42:12"
+
+},
+{
+    "title": "Mis Boleros Favoritos",
+    "year": 2002,
+    "genre": "Latinamerican Pop",
+    "artist": "Luis Miguel",
+    "totalSongs": 14,
+    "duration": "47:47"
+
+},
+{
+    "title": "Zaz",
+    "year": 2010,
+    "genre": "Gypsy Jazz",
+    "artist": "Zaz",
+    "totalSongs": 11,
+    "duration": "38:59"
+
+},
+{
+    "title": "Bon Jovi",
+    "year": 1984,
+    "genre": "Hard Rock",
+    "artist": "Bon Jovi",
+    "totalSongs": 9,
+    "duration": "38:33"
+
+},
+{
+    "title": "A Night at the Opera",
+    "year": 1975,
+    "genre": "Hard Rock",
+    "artist": "Queen",
+    "totalSongs": 12,
+    "duration": "44:11"
+
+}
+]

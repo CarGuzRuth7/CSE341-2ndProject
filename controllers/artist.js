@@ -30,9 +30,29 @@ const getSingleArtist = async (req, res) => {
     res.status(500).send({ message: error.message });
   }
 };
+//POST REQUEST
+const postNewArtist = async (req, res) => {
+  const artist = {
+    name: req.body.name,
+    age: req.body.age,
+    typeOfVoice: req.body.typeOfVoice,
+    band: req.body.band,
+    genre: req.body.genre,
+    death: req.body.death
+  };
 
+  const createArtist = await db.getDb().db('musicAPI').collection('artist').insertOne(artist);
+
+  if (createArtist.acknowledged) {
+    res.status(201).json(createArtist);
+  } else {
+    console.log('Error');
+    res.status(500).send(createArtist.error || 'Could not create artist');
+  }
+};
 
 module.exports = {
   getAllArtists,
-  getSingleArtist
+  getSingleArtist,
+  postNewArtist
 };
