@@ -50,8 +50,45 @@ const postNewUser = async (req, res) => {
   }
 };
 
+//UPDATE request
+const updateUser = async (req, res) => {
+  const id = new ObjectId(req.params.id);
+  const user = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favAlbum: req.body.favAlbum,
+    favArtist: req.body.favArtist
+  };
+  const updateUser = await db
+    .getDb()
+    .db('musicAPI')
+    .collection('users')
+    .updateOne({ _id: id }, { $set: user });
+
+  if (updateUser.modifiedCount > 0) {
+    res.status(204).send(updateUser);
+  } else {
+    res.status(500).send(updateUser.error || 'Could not update user or does not exist');
+  }
+};
+
+//DELETE request
+const deleteUser = async (req, res) => {
+  const id = new ObjectId(req.params.id);
+  const deleteUser = await db.getDb().db('musicAPI').collection('users').deleteOne({ _id: id });
+
+  if (deleteUser.deletedCount > 0) {
+    res.status(200).send(deleteUser);
+  } else {
+    res.status(500).send(deleteUser.error || 'Could not delete user or does not exist');
+  }
+};
+
 module.exports = {
   getAllUsers,
   getSingleUser,
-  postNewUser
+  postNewUser,
+  updateUser,
+  deleteUser
 };

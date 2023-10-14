@@ -52,8 +52,47 @@ const postNewAlbum = async (req, res) => {
   }
 };
 
+//UPDATE request
+const updateAlbum = async (req, res) => {
+  const id = new ObjectId(req.params.id);
+  const album = {
+    title: req.body.title,
+    year: req.body.year,
+    genre: req.body.genre,
+    artist: req.body.artist,
+    totalSongs: req.body.totalSongs,
+    duration: req.body.duration
+  };
+
+  const updateAlbum = await db
+    .getDb()
+    .db('musicAPI')
+    .collection('albums')
+    .updateOne({ _id: id }, { $set: album });
+
+  if (updateAlbum.modifiedCount > 0) {
+    res.status(204).send(updateAlbum);
+  } else {
+    res.status(500).send(updateAlbum.error || 'Could not update album or does not exist');
+  }
+};
+
+//DELETE request
+const deleteAlbum = async (req, res) => {
+  const id = new ObjectId(req.params.id);
+  const deleteALbum = await db.getDb().db('musicAPI').collection('albums').deleteOne({ _id: id });
+
+  if (deleteALbum.deletedCount > 0) {
+    res.status(200).send(deleteALbum);
+  } else {
+    res.status(500).send(deleteALbum.error || 'Could not delete album or does not exist');
+  }
+};
+
 module.exports = {
   getAllAlbums,
   getSingleAlbum,
-  postNewAlbum
+  postNewAlbum,
+  updateAlbum,
+  deleteAlbum
 };

@@ -1,29 +1,19 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "DContacts API",
+    "title": "Music API",
+    "description": "MusicAPI for a CSE341 2nd project.",
     "version": "1.0.0"
   },
-  "host": "localhost:4000",
+  "host": "music-api-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/albums/": {
       "get": {
-        "description": "",
+        "description": "Get all Albums",
         "responses": {
           "200": {
             "description": "OK"
@@ -34,7 +24,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a new album",
         "parameters": [
           {
             "name": "body",
@@ -46,7 +36,7 @@
                   "example": "any"
                 },
                 "year": {
-                  "example": "any"
+                  "example": 0
                 },
                 "genre": {
                   "example": "any"
@@ -55,7 +45,7 @@
                   "example": "any"
                 },
                 "totalSongs": {
-                  "example": "any"
+                  "example": 0
                 },
                 "duration": {
                   "example": "any"
@@ -76,7 +66,7 @@
     },
     "/albums/{id}": {
       "get": {
-        "description": "",
+        "description": "Get a single album by its ID",
         "parameters": [
           {
             "name": "id",
@@ -96,11 +86,76 @@
             "description": "Internal Server Error"
           }
         }
+      },
+      "put": {
+        "description": "Update an album by its ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "year": {
+                  "example": 0
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "artist": {
+                  "example": "any"
+                },
+                "totalSongs": {
+                  "example": 0
+                },
+                "duration": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete an album by its id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/artists/": {
       "get": {
-        "description": "",
+        "description": "Get all Artist",
         "responses": {
           "200": {
             "description": "OK"
@@ -111,7 +166,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a new artist. The death property is null or a string with the format day, month and year (XX Month XXXX).",
         "parameters": [
           {
             "name": "body",
@@ -123,7 +178,7 @@
                   "example": "any"
                 },
                 "age": {
-                  "example": "any"
+                  "example": 0
                 },
                 "typeOfVoice": {
                   "example": "any"
@@ -135,7 +190,7 @@
                   "example": "any"
                 },
                 "death": {
-                  "example": "any"
+                  "example": null
                 }
               }
             }
@@ -153,7 +208,7 @@
     },
     "/artists/{id}": {
       "get": {
-        "description": "",
+        "description": "Get a single artist by its ID",
         "parameters": [
           {
             "name": "id",
@@ -173,11 +228,76 @@
             "description": "Internal Server Error"
           }
         }
+      },
+      "put": {
+        "description": "Update an artist by its ID. The death property is null or a string with the format day, month and year (XX Month XXXX).",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "age": {
+                  "example": 0
+                },
+                "typeOfVoice": {
+                  "example": "any"
+                },
+                "band": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "death": {
+                  "example": null
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete an artist by its id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
       }
     },
     "/users/": {
       "get": {
-        "description": "",
+        "description": "Get all Users",
         "responses": {
           "200": {
             "description": "OK"
@@ -188,7 +308,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a new user",
         "parameters": [
           {
             "name": "body",
@@ -227,7 +347,7 @@
     },
     "/users/{id}": {
       "get": {
-        "description": "",
+        "description": "Get a single user by its ID",
         "parameters": [
           {
             "name": "id",
@@ -242,6 +362,68 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "Update a user by its ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "favAlbum": {
+                  "example": "any"
+                },
+                "favArtist": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a user by its id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
