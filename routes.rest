@@ -78,6 +78,7 @@ Content-Type: application/json
     "firstName": "Matias",
     "lastName": "Mansilla",
     "email": "matiasmansilla@gmail.com",
+    "password": "yosoyMatias1",
     "favAlbum": "",
     "favArtist": ""
   }
@@ -89,6 +90,7 @@ Content-Type: application/json
     "firstName": "Matias",
     "lastName": "Mansilla",
     "email": "matiasmansilla@gmail.com",
+    "password": "yosoyMatias1997",
     "favAlbum": "",
     "favArtist": ""
   }
@@ -176,6 +178,7 @@ Content-Type: application/json
     "firstName": "Matias",
     "lastName": "Mansilla",
     "email": "matiasmansilla@gmail.com",
+    "password": "yosoyMatias1",
     "favAlbum": "",
     "favArtist": ""
   }
@@ -187,6 +190,7 @@ Content-Type: application/json
     "firstName": "Matias",
     "lastName": "Mansilla",
     "email": "matiasmansilla@gmail.com",
+    "password": "yosoyMatias1997",
     "favAlbum": "",
     "favArtist": ""
   }

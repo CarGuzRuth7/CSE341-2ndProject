@@ -10,7 +10,7 @@ const getAllUsers = async (req, res) => {
       res.send(data).status(200);
     });
   } catch (error) {
-    res.status(500).send({ message: error.message });
+    res.status(400).send({ message: error.message });
   }
 };
 
@@ -27,7 +27,7 @@ const getSingleUser = async (req, res) => {
       }
     });
   } catch (error) {
-    res.status(500).send({ message: error.message });
+    res.status(400).send({ message: error.message });
   }
 };
 //POST REQUEST
@@ -36,6 +36,7 @@ const postNewUser = async (req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
+    password: req.body.password,
     favAlbum: req.body.favAlbum,
     favArtist: req.body.favArtist
   };
@@ -57,6 +58,7 @@ const updateUser = async (req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
+    password: req.body.password,
     favAlbum: req.body.favAlbum,
     favArtist: req.body.favArtist
   };

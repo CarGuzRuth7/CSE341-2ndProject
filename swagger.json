@@ -302,8 +302,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -323,6 +323,9 @@
                   "example": "any"
                 },
                 "email": {
+                  "example": "any"
+                },
+                "password": {
                   "example": "any"
                 },
                 "favAlbum": {
@@ -363,8 +366,8 @@
           "404": {
             "description": "Not Found"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -390,6 +393,9 @@
                   "example": "any"
                 },
                 "email": {
+                  "example": "any"
+                },
+                "password": {
                   "example": "any"
                 },
                 "favAlbum": {
