@@ -18,8 +18,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -58,6 +58,9 @@
           "201": {
             "description": "Created"
           },
+          "422": {
+            "description": "Unprocessable Content"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -82,8 +85,8 @@
           "404": {
             "description": "Not Found"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -128,6 +131,9 @@
           "204": {
             "description": "No Content"
           },
+          "422": {
+            "description": "Unprocessable Content"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -160,13 +166,13 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
       "post": {
-        "description": "Create a new artist. The death property is null or a string with the format day, month and year (XX Month XXXX).",
+        "description": "Create a new artist. The death property is NA (Not Aplicable) string or with the format day, month and year (XX Month XXXX).",
         "parameters": [
           {
             "name": "body",
@@ -190,7 +196,7 @@
                   "example": "any"
                 },
                 "death": {
-                  "example": null
+                  "example": "NA"
                 }
               }
             }
@@ -200,18 +206,21 @@
           "201": {
             "description": "Created"
           },
+          "422": {
+            "description": "Unprocessable Content"
+          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       }
     },
-    "/artists/{id}": {
+    "/artists/{name}": {
       "get": {
-        "description": "Get a single artist by its ID",
+        "description": "Get a single artist by its name. Example: Michael Jackson",
         "parameters": [
           {
-            "name": "id",
+            "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
@@ -224,16 +233,16 @@
           "404": {
             "description": "Not Found"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
       "put": {
-        "description": "Update an artist by its ID. The death property is null or a string with the format day, month and year (XX Month XXXX).",
+        "description": "Update an artist by its name. The death property is NA (Not Aplicable) string or with the format day, month and year (XX Month XXXX).",
         "parameters": [
           {
-            "name": "id",
+            "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
@@ -260,7 +269,7 @@
                   "example": "any"
                 },
                 "death": {
-                  "example": null
+                  "example": "NA"
                 }
               }
             }
@@ -270,16 +279,19 @@
           "204": {
             "description": "No Content"
           },
+          "422": {
+            "description": "Unprocessable Content"
+          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       },
       "delete": {
-        "description": "Delete an artist by its id",
+        "description": "Delete an artist by its name",
         "parameters": [
           {
-            "name": "id",
+            "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
@@ -341,6 +353,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "422": {
+            "description": "Unprocessable Content"
           },
           "500": {
             "description": "Internal Server Error"
@@ -411,6 +426,9 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "422": {
+            "description": "Unprocessable Content"
           },
           "500": {
             "description": "Internal Server Error"

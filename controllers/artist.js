@@ -1,4 +1,3 @@
-const { ObjectId } = require('mongodb');
 const db = require('../db/connection');
 
 //GET REQUESTS
@@ -10,24 +9,24 @@ const getAllArtists = async (req, res) => {
       res.send(data).status(200);
     });
   } catch (error) {
-    res.status(500).send({ message: error.message });
+    res.status(400).send({ message: error.message });
   }
 };
 
 const getSingleArtist = async (req, res) => {
   //get a single data from id
   try {
-    const idParam = new ObjectId(req.params.id);
-    const data = await db.getDb().db('musicAPI').collection('artist').find({ _id: idParam });
+    const name = req.params.name;
+    const data = await db.getDb().db('musicAPI').collection('artist').find({ name: name });
     data.toArray().then((data) => {
       if (data == '') {
-        res.status(404).send(data.error || idParam + ' Artist Not Found');
+        res.status(404).send(data.error || name + ' Artist Not Found');
       } else {
         res.send(data).status(200);
       }
     });
   } catch (error) {
-    res.status(500).send({ message: error.message });
+    res.status(400).send({ message: error.message });
   }
 };
 //POST REQUEST
@@ -53,7 +52,7 @@ const postNewArtist = async (req, res) => {
 
 //UPDATE request
 const updateArtist = async (req, res) => {
-  const id = new ObjectId(req.params.id);
+  const name = req.params.name;
   const artist = {
     name: req.body.name,
     age: req.body.age,
@@ -66,7 +65,7 @@ const updateArtist = async (req, res) => {
     .getDb()
     .db('musicAPI')
     .collection('artist')
-    .updateOne({ _id: id }, { $set: artist });
+    .updateOne({ name: name }, { $set: artist });
 
   if (updateArtist.modifiedCount > 0) {
     res.status(204).send(updateArtist);
@@ -77,8 +76,12 @@ const updateArtist = async (req, res) => {
 
 //DELETE request
 const deleteArtist = async (req, res) => {
-  const id = new ObjectId(req.params.id);
-  const deleteArtist = await db.getDb().db('musicAPI').collection('artist').deleteOne({ _id: id });
+  const name = req.params.name;
+  const deleteArtist = await db
+    .getDb()
+    .db('musicAPI')
+    .collection('artist')
+    .deleteOne({ name: name });
 
   if (deleteArtist.deletedCount > 0) {
     res.status(200).send(deleteArtist);

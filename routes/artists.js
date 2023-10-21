@@ -4,9 +4,9 @@ const { validateArtist } = require('../validation/validateSchema');
 const validateData = require('../validation/validation');
 
 routes.get('/', controller.getAllArtists);
-routes.get('/:id', controller.getSingleArtist);
+routes.get('/:name', controller.getSingleArtist);
 routes.post('/', validateData(validateArtist), controller.postNewArtist);
-routes.put('/:id', validateData(validateArtist), controller.updateArtist);
-routes.delete('/:id', controller.deleteArtist);
+routes.put('/:name', validateData(validateArtist), controller.updateArtist);
+routes.delete('/:name', controller.deleteArtist);
 
 module.exports = routes;

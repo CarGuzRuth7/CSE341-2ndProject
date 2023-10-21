@@ -10,7 +10,7 @@ const getAllAlbums = async (req, res) => {
       res.send(data).status(200);
     });
   } catch (error) {
-    res.status(500).send({ message: error.message });
+    res.status(400).send({ message: error.message });
   }
 };
 
@@ -27,7 +27,7 @@ const getSingleAlbum = async (req, res) => {
       }
     });
   } catch (error) {
-    res.status(500).send({ message: error.message });
+    res.status(400).send({ message: error.message });
   }
 };
 
