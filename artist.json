@@ -4,7 +4,7 @@
     "typeOfVoice": "mezzosoprano",
     "band": "Adele",
     "genre": "Blue-eyed soul",
-    "death": null
+    "death": "null"
 
 },
 {
@@ -22,7 +22,7 @@
     "typeOfVoice": "tenor",
     "band": "Albel Pintos",
     "genre": "Latinamerican Pop",
-    "death": null
+    "death": "null"
 
 },
 {
@@ -40,7 +40,7 @@
     "typeOfVoice": "baritone",
     "band": "Gorillaz",
     "genre": "Alternative Rock",
-    "death": null
+    "death": "null"
 
 },
 {
@@ -49,7 +49,7 @@
     "typeOfVoice": "tenor",
     "band": "The Beatles",
     "genre": "Rock",
-    "death": null
+    "death": "null"
 
 },
 {
@@ -58,7 +58,7 @@
     "typeOfVoice": "baritone",
     "band": "System of a Down",
     "genre": "Alternative Rock",
-    "death": null
+    "death": "null"
 
 },
 {
@@ -76,7 +76,7 @@
     "typeOfVoice": "mezzosoprano",
     "band": "Evanescence",
     "genre": "Alternative Rock",
-    "death": null
+    "death": "null"
 
 },
 {
@@ -85,7 +85,7 @@
     "typeOfVoice": "baritone",
     "band": "Rick Astley",
     "genre": "Pop",
-    "death": null
+    "death": "null"
 
 },
 {
@@ -94,7 +94,7 @@
     "typeOfVoice": "tenor",
     "band": "War Cry",
     "genre": "Power Metal",
-    "death": null
+    "death": "null"
 
 }
 ]
