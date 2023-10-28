@@ -6,10 +6,12 @@ const port = process.env.PORT || 4000;
 
 app.use(cors()).use(express.json()).use('/', require('./routes'));
 
+//throw message error in case is not handled anywere
 process.on('unhandledRejection', (err) => {
   console.log(`Error: ${(err.name, err.message)}`);
 });
 
+//initialize database and server
 mongodb.initDB((err) => {
   if (err) {
     console.log(err);
