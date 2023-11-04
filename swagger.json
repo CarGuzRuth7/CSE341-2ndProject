@@ -7,13 +7,12 @@
   },
   "host": "music-api-cse341.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/albums/": {
       "get": {
         "description": "Get all Albums",
+        "tags": ["Albums"],
         "responses": {
           "200": {
             "description": "OK"
@@ -25,6 +24,7 @@
       },
       "post": {
         "description": "Create a new album",
+        "tags": ["Albums"],
         "parameters": [
           {
             "name": "body",
@@ -70,6 +70,7 @@
     "/albums/{id}": {
       "get": {
         "description": "Get a single album by its ID",
+        "tags": ["Albums"],
         "parameters": [
           {
             "name": "id",
@@ -92,6 +93,7 @@
       },
       "put": {
         "description": "Update an album by its ID",
+        "tags": ["Albums"],
         "parameters": [
           {
             "name": "id",
@@ -141,6 +143,7 @@
       },
       "delete": {
         "description": "Delete an album by its id",
+        "tags": ["Albums"],
         "parameters": [
           {
             "name": "id",
@@ -162,6 +165,7 @@
     "/artists/": {
       "get": {
         "description": "Get all Artist",
+        "tags": ["Artists"],
         "responses": {
           "200": {
             "description": "OK"
@@ -173,6 +177,7 @@
       },
       "post": {
         "description": "Create a new artist. The death property is NA (Not Aplicable) string or with the format day, month and year (XX Month XXXX).",
+        "tags": ["Artists"],
         "parameters": [
           {
             "name": "body",
@@ -218,6 +223,7 @@
     "/artists/{name}": {
       "get": {
         "description": "Get a single artist by its name. Example: Michael Jackson",
+        "tags": ["Artists"],
         "parameters": [
           {
             "name": "name",
@@ -240,6 +246,7 @@
       },
       "put": {
         "description": "Update an artist by its name. The death property is NA (Not Aplicable) string or with the format day, month and year (XX Month XXXX).",
+        "tags": ["Artists"],
         "parameters": [
           {
             "name": "name",
@@ -289,6 +296,7 @@
       },
       "delete": {
         "description": "Delete an artist by its name",
+        "tags": ["Artists"],
         "parameters": [
           {
             "name": "name",
@@ -310,6 +318,7 @@
     "/users/": {
       "get": {
         "description": "Get all Users",
+        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "OK"
@@ -321,6 +330,7 @@
       },
       "post": {
         "description": "Create a new user",
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "body",
@@ -366,6 +376,7 @@
     "/users/{id}": {
       "get": {
         "description": "Get a single user by its ID",
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -388,6 +399,7 @@
       },
       "put": {
         "description": "Update a user by its ID",
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -437,6 +449,7 @@
       },
       "delete": {
         "description": "Delete a user by its id",
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
